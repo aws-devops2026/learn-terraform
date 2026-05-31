@@ -1,4 +1,4 @@
-# learn-terraform
+# learn-terraform & diskspce issue
 How to fix the space issues on the lab AMI ?
 Our LAB AMI uses xfs fileSystem
 
