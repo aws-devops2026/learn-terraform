@@ -115,3 +115,44 @@ How terraform comes to know in which aws account does it has to provision the in
 IAM : By default one service in AWS cannot authenticate with another AWS Service! How can my Ec2 instance authenticate ( without userName/password - accessKey/secretKey ) ? Typically, we create an IAM Role for EC2 Instance and provide the needed roles and attached that role to the aws instance and this is the recommended pattern which is safe, secure and password less.
 ........
 For that role, we give permissions based on the need.
+
+Please create an IAM Role in your account with name b60-admin and assign adminstrator access and assign that role to the ec2-workStation. Once you attach the IAM Role to the workstation, from that worstation, you can authenticate to the aws account without the need of credentials.
+
+
+
+What terraform apply can do ?
+
+It can create the resources
+It can update the resources 
+It can turn off and on the resources
+It can destory and recreate the resources
+
+So, what determines that to happen ?
+
+You code and what you mentioned is going to act.
+
++ : create
+- : destroy
+-/+ : destroy and create
+~ : updating the resource
+
+Outputs play a very very  important role in terraform:
+
+1) They are to display something on the screen
+2) Share the information between the modules.
+
+We can supply inputs, in these formats:
+1) Declare a variable and define the default value
+    variable "test" {
+        descrition = "Test Variable"
+        default = test
+    }
+
+2) Declare an empty variable and supply the value in values file
+
+Terraform by default pikcs the values from terraform.tfvars ( You don't have to explicitly call it, if the name is dev.tfvars, need to call it ) or *.auto.tfvars
+
+    # terraform plan -var-file=xys.tfvars
+
+    Can we supply a variable from a commandLine or overRide it from the commandLine ? terraform plan -var varName=value commandLine variable > than default variable
+    
