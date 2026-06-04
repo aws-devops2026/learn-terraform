@@ -1,6 +1,6 @@
 resource "aws_instance" "this" {
   ami           = "ami-0fcc78c828f981df2"
-  instance_type = "t3.nano"
+  instance_type = "t3.medium"
 
   tags = {
     Name = "B60-Demo-Ec2"
