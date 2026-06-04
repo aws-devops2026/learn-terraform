@@ -3,6 +3,6 @@ resource "aws_instance" "this" {
   instance_type = "t3.micro"
 
   tags = {
-    Name = "Created-By-Terrform"
+    Name = "B60-Demo-Ec2"
   }
 }
