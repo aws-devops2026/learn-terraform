@@ -90,4 +90,27 @@ $ terraform init
     │ .terraform/providers/registry.terraform.io/hashicorp/aws/6.47.0/linux_amd64/terraform-provider-aws_v6.47.0_x5: no space left on
     │ device
 
-```
+```...........................................................................
+
+Why we get this error when running plan against aws resources ?
+$ terraform plan
+
+Planning failed. Terraform encountered an error while generating this plan.
+
+╷
+│ Error: No valid credential sources found
+│
+│   with provider["registry.terraform.io/hashicorp/aws"],
+│   on provider.tf line 2, in provider "aws":
+│    2: provider "aws" {
+│
+│ Please see https://registry.terraform.io/providers/hashicorp/aws
+│ for more information about providing credentials.
+│
+│ Error: failed to refresh cached credentials, no EC2 IMDS role found, operation error ec2imds: GetMetadata, http response error
+│ StatusCode: 404, request to EC2 IMDS failed
+
+How terraform comes to know in which aws account does it has to provision the infra? Even it know, how authentication works ?
+
+IAM : By default one service in AWS cannot authenticate with another AWS Service! How can my Ec2 instance authenticate ( without userName/password - accessKey/secretKey ) ? Typically, we create an IAM Role for EC2 Instance and provide the needed roles and attached that role to the aws instance and this is the recommended pattern which is safe, secure and password less.
+........
