@@ -194,4 +194,57 @@ We will start with v4
 
 AWS Can be accessed : 1) from UI 2) aws cli 3) sdk
 
+Arguments vs Attributes in terraform:
+Arguments are inputs to the resource
+Attributes are the outputs from the resource which are available after the creation of resource ( ip address, instance id, arn , private ip )
 
+
+How AMI's are built & released & what is the cadence followed as per the best practices :
+
+RHEL9 ( Base AMI Latest v01  ) ---> Make a EC2 Instance with that base AMI & we patch it, do the needed changes ---> Make an AMI ( rhel9-cis-l1-06032026 )
+
+After a quarter
+
+RHEL9 ( Base AMI Latest v02 ) ---> Make a EC2 Instance with that base AMI & we patch it, do the needed changes ---> Make an AMI ( rhel9-cis-l1-09032026 )
+
+How can we fetch the information from the already existing resources using terraform ?
+Datasource :
+    Using datasource, we can fetch the information of the available resources and there are available as per the provider documentation
+
+
+    How terraform complies the code ?
+
+    Terraform don't mind whether the code is in a single file or in multiple files :
+When ever run the terraform init, terraform loads the *.tf files in an alphabetical orders and compliles them logically.
+
+Goal: ( MVP: Minimal Viable Product )
+Roboshop Infra should up with sg, route53 dns record, ansible-cm should run on the components as a part of the provisioning.
+Should also support multi envronment based pattern
+
+NFR:
+
+1) Code should be DRY
+2) Re-run of the code should work without any issues.
+3) Secrets should not be hardcoded
+4) Code should support multi-environment
+
+In terraform, to keep code DRY, we have to develop the CODE using MODULES
+
+> Modules help in writing code once and can be used by multiple teams just by supplying inputs
+> With modules, code length is going to increase, sharing of outputs among the resources would be tricky, but that should not stop us 
+
+Root Module vs Child Module: Place where you run the terraform commands Calling Module
+
+Modules: Modules can be in the same repository ( Local Modules ) Modules can be a the different repository ( Remote Modules ) Modules can be provider supplied ( Provider Modules ) [ Less Control Over the features ]
+
+
+What all "terraform init" can do ?
+
+* Iitializing modules...
+    - demo-ec2 in modules
+* Initializing provider plugins found in the configuration... ( as per the code )
+* Initializing the backend.
+
+How can we initize the backend, if the attributes of the backend are on a specific file ?
+ terraform init --backend-config=env/prod/state.tfvars
+ 
