@@ -114,3 +114,4 @@ How terraform comes to know in which aws account does it has to provision the in
 
 IAM : By default one service in AWS cannot authenticate with another AWS Service! How can my Ec2 instance authenticate ( without userName/password - accessKey/secretKey ) ? Typically, we create an IAM Role for EC2 Instance and provide the needed roles and attached that role to the aws instance and this is the recommended pattern which is safe, secure and password less.
 ........
+For that role, we give permissions based on the need.
