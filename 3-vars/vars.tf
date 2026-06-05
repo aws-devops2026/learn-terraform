@@ -29,6 +29,7 @@ output "favFruit" {
     value = "Favourite fruit is ${var.fruits[1]}"
 }
 
+
 # Example of map variable
 variable "person" {
     type = map(string)
