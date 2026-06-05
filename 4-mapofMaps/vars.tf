@@ -19,3 +19,9 @@ variable "fruitInfo" {
     }
   }
 }
+
+
+output "fruitInfo" {
+  value = var.fruitInfo
+}
+
