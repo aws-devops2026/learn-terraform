@@ -44,3 +44,8 @@ variable "person" {
 output "person" {
     value = var.person
 }
+
+output "personDetails" {
+  
+  value = "Person's name is ${var.person["name"]}, city is ${var.person["city"]} and age is ${var.person["age"]}"
+}
