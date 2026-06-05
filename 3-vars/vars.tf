@@ -7,3 +7,14 @@ variable "cityName" {
 output "cityName" {
     value = var.cityName
 }
+
+# Example of list variable 
+variable "fruits" {
+    type        = list(string)
+    description = "List of fruits"
+    default     = [
+        "Apple", 
+        "Banana", 
+        "Cherry"
+    ]
+}
