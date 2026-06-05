@@ -9,6 +9,7 @@ output "cityName" {
 }
 
 # Example of list variable 
+
 variable "fruits" {
     type        = list(string)
     description = "List of fruits"
@@ -17,4 +18,9 @@ variable "fruits" {
         "Banana", 
         "Cherry"
     ]
+}
+
+# Printing a list variable
+output "fruits" {
+    value = var.fruits
 }
