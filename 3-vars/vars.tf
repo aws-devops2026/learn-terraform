@@ -28,3 +28,14 @@ output "fruits" {
 output "favFruit" {
     value = "Favourite fruit is ${var.fruits[1]}"
 }
+
+# Example of map variable
+variable "person" {
+    type = map(string)
+    description = "Details of a person"
+    default = {
+        name = "Sai"
+        city = "Thorrur-warangal"
+        age  = "12"
+    }
+}
