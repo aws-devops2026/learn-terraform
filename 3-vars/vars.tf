@@ -40,3 +40,7 @@ variable "person" {
         age  = "12"
     }
 }
+
+output "person" {
+    value = var.person
+}
