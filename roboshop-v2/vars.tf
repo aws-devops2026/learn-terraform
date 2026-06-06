@@ -8,7 +8,7 @@ variable "components" {
         }
     
     catalogaue = {
-    instance_type = "t3.micro"
+    instance_type = "t3.small"
             ami_id = "ami-0fcc78c828f981df2"
         }
 
