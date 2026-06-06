@@ -21,9 +21,12 @@ variable "components" {
     #instance_type = "t3.micro"
             ami_id = "ami-0fcc78c828f981df2"
         }
+        cart = {
+    #instance_type = "t3.micro"
+            ami_id = "ami-0fcc78c828f981df2"
         }
 }
-
+}
 
 
 #variable "ami_id" {
