@@ -12,9 +12,9 @@ value = "Apple is ${var.fruits["apple"]["color"]} in color, tastes ${var.fruits[
 }
 
   
-# output "grapesProperties" {
-#     value = "grapes are ${var.fruits["grapes"]["color"]} in color, taste ${var.fruits["grapes"]["taste"]}, cost ${var.fruits["grapes"]["price"]} per ${var.fruits["grapes"]["metrics"]} and are available in ${var.fruits["bluebgrapeserry"]["state"]}"
-# }
+ output "grapesProperties" {
+    value = "grapes are ${var.fruits["grapes"]["color"]} in color, taste ${var.fruits["grapes"]["taste"]}, cost ${var.fruits["grapes"]["price"]} per ${var.fruits["grapes"]["metrics"]} and are available in ${var.fruits["bluebgrapeserry"]["state"]}"
+}
 
 output "blueberryProperties" {
     value = "Blueberries are ${lookup(var.fruits["blueberry"], "color", "unknown")} in color, taste ${lookup(var.fruits["blueberry"], "taste", "unknown")}, cost ${lookup(var.fruits["blueberry"], "price", "unknown")} per ${lookup(var.fruits["blueberry"], "metrics", "pound")} and are available in ${lookup(var.fruits["blueberry"], "state", "PUNJAB")}"
