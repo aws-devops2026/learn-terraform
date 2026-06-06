@@ -7,7 +7,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "6.46.0"                  # Provider version, if you don't mention it downloads the latest plugins 
+      version = "6.49.0"                  # Provider version, if you don't mention it downloads the latest plugins 
     }
   }
 }
