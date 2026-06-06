@@ -5,6 +5,6 @@ resource "aws_instance" "main" {
   instance_type = "t3.micro"
 
   tags = {
-    Name = "B60-Demo-Ec3"
+    Name = "B60-Demo-Ec2-${count.index}"
   }
 }
