@@ -12,8 +12,8 @@ value = "Apple is ${var.fruits["apple"]["color"]} in color, tastes ${var.fruits[
 }
 
   
-# output "blueberryProperties" {
-#     value = "Blueberries are ${var.fruits["blueberry"]["color"]} in color, taste ${var.fruits["blueberry"]["taste"]}, cost ${var.fruits["blueberry"]["price"]} per ${var.fruits["blueberry"]["metrics"]} and are available in ${var.fruits["blueberry"]["state"]}"
+# output "grapesProperties" {
+#     value = "grapes are ${var.fruits["grapes"]["color"]} in color, taste ${var.fruits["grapes"]["taste"]}, cost ${var.fruits["grapes"]["price"]} per ${var.fruits["grapes"]["metrics"]} and are available in ${var.fruits["bluebgrapeserry"]["state"]}"
 # }
 
 output "blueberryProperties" {
