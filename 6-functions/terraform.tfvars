@@ -2,7 +2,7 @@ fruits = {
     apple = {
         color = "red"
         taste = "sweet"
-        price = 100
+        price = 75
         metrics = "kg"
         state = "Telangana"
     }
