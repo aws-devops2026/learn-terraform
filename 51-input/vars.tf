@@ -13,3 +13,7 @@ variable "environment" {
     type        = string
     description = "The environment for deployment"
 }
+
+output "environment" {
+    value = var.environment
+}
