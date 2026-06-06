@@ -18,7 +18,7 @@ variable "components" {
         }
 
     payment = {
-    instance_type = "t3.micro"
+    #instance_type = "t3.micro"
             ami_id = "ami-0fcc78c828f981df2"
         }
         }
