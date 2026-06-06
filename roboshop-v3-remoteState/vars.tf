@@ -2,7 +2,7 @@
 variable "components" {
     default = {
         catalogue = {
-            instance_type = "t3.medium"
+            instance_type = "t3.micro"
             ami_id = "ami-0fcc78c828f981df2"
         }
         shipping = {
