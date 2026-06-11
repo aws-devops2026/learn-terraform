@@ -1,3 +1,3 @@
-bucket = "b60-s3-for-tfstate"
-key    = "expense-v5/prod/terraform.tfstate"
+bucket = "b60-s3-for-terraform"
+key    = "expense-v1/terraform.tfstate"
 region = "us-east-1"
