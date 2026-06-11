@@ -251,6 +251,7 @@ How can we initize the backend, if the attributes of the backend are on a specif
 ...............................
 
 How to fix the space issues on the lab AMI ?
+
 Our LAB AMI uses xfs fileSystem
 
 Expanding the disk, is not going to let the fileSystem take it directly. 
