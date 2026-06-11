@@ -1,9 +1,12 @@
 module "ec2" {
-    source   = "./modules"
-    env_name = var.env_name
-  
-}
+    for_each      = var.components
 
-output "env_name" {
-  value = module.ec2.env_name
+    source        = "./modules"
+    env_name      = var.env_name   # This is how we supply the value to the module, we can use any variable or hardcoded value here
+    ami_name      = var.ami_name
+    sg_name       = var.sg_name
+    name          = each.key
+    instance_type = each.value["instance_type"]
+    domain_name   = var.domain_name
+    internal      = each.value["internal"]
 }
