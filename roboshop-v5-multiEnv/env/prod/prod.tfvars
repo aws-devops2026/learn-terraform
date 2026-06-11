@@ -1,7 +1,7 @@
 # Value of the map of maps for components variable, we can use this in any environment and change the instance type as per the requirement of the environment. This is how we can achieve the DRY code in terraform.
 components = {
     mongodb = {
-        instance_type = "t3.medium"
+        instance_type = "t3.micro"
         internal = true
     }
     catalogue = {
@@ -21,11 +21,11 @@ components = {
         internal = true
     }
     mysql = {
-        instance_type = "t3.medium"
+        instance_type = "t3.micro"
         internal = true
     }
     shipping = {
-        instance_type = "t3.medium"
+        instance_type = "t3.micro"
         internal = true
     }
     rabbitmq = {
