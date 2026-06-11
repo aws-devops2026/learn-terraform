@@ -44,5 +44,5 @@ components = {
 
 env_name = "test"
 ami_name = "DevOps-LabImage-RHEL9"
-sg_name = "b60-allow-all"
-domain_name = "robotshop.fun"
+sg_name = "b60-sg"
+domain_name = "thunugur-it.online"
