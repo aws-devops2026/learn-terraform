@@ -8,7 +8,9 @@ data "aws_ami" "latest" {
         values =["${var.ami_name}"] 
         
         # Name of the AMI, you can find it in the AWS console or by using AWS CLI
-    }        
+    }   
+
+  owners = ["self"]
 
 }
 
