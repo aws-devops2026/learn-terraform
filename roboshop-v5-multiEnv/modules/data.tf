@@ -1,6 +1,6 @@
 # aws ami datasource
 data "aws_ami" "latest" {
-    most_recent = false
+    most_recent = true
 
 
     filter {
