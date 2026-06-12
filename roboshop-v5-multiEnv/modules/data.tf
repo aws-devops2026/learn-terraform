@@ -12,6 +12,8 @@ data "aws_ami" "latest" {
 
  # owners = ["self"]
 
+   owners = ["276719382023"]  # ownerID
+
 }
 
 # Datasource for security group
