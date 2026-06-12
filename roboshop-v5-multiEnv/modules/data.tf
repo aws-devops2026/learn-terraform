@@ -1,7 +1,8 @@
 # aws ami datasource
 data "aws_ami" "latest" {
     most_recent = true
-    owners = ["ami-0fcc78c828f981df2"]
+    
+    owners = ["self"]
 
     filter {
         name   = "name"
