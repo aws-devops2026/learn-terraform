@@ -10,6 +10,7 @@ resource "aws_instance" "main" {
   }
 }
 
+
 output "env_name" {
     value = var.env_name
 }
