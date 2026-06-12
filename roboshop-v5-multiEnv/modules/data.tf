@@ -10,7 +10,7 @@ data "aws_ami" "latest" {
         # Name of the AMI, you can find it in the AWS console or by using AWS CLI
     }   
 
-  owners = ["self"]
+ # owners = ["self"]
 
 }
 
